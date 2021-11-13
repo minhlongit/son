@@ -7694,3 +7694,22 @@
     })();
   },
 ]);
+
+var myArrayNumberPhone = [
+  "0792.422.692",
+  "0902.878.059",
+  "0776.124.032",
+  "0703.342.923",
+  "0326.822.721",
+];
+var rand = myArrayNumberPhone[Math.floor(Math.random() * myArrayNumberPhone.length)];
+var innerPhone = document.querySelectorAll("#text-number-phone");
+innerPhone.forEach((element) => {
+  element.innerHTML = rand;
+});
+
+var getLinkZalo = document.querySelectorAll(".click-link-zalo");
+getLinkZalo.forEach(element => {
+  element.setAttribute("href",`https://zalo.me/${rand}`);
+});
+
